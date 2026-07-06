@@ -1,0 +1,151 @@
+.contato-page {
+  padding: 30px 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.contato-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contato-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.contato-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contato-header p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.contato-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contato-info {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contato-info h2 {
+  color: #667eea;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.contato-item {
+  margin-bottom: 25px;
+}
+
+.contato-item h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.contato-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.contato-item a {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contato-item a:hover {
+  color: #764ba2;
+}
+
+.contato-form-section {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contato-form-section h2 {
+  color: #667eea;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #764ba2;
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .contato-content {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-header h1 {
+    font-size: 1.8rem;
+  }
+}
