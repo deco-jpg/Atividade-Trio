@@ -6,15 +6,13 @@ import api from '../../services/api';
 export default function ClienteForm() {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
-    const [telefone, setTelefone] = useState('');
-    const [cpf, setCpf] = useState('');
+    const [senha, setSenha] = useState('');
     const [estaEnviando, setEstaEnviando] = useState(false);
 
     function limparCampos() {
         setNome('');
         setEmail('');
-        setTelefone('');
-        setCpf('');
+        setSenha('');
     }
 
     async function EnviarFormulario(event) {
@@ -23,8 +21,7 @@ export default function ClienteForm() {
         const dadosFormulario = {
             nome: nome,
             email: email,
-            telefone: telefone,
-            cpf: cpf
+            senha: senha
         };
 
         try {
@@ -64,22 +61,12 @@ export default function ClienteForm() {
                     />
                 </div>
                 <div className='form-group'>
-                    <label htmlFor='telefone'>Telefone:</label>
+                    <label htmlFor='senha'>Senha:</label>
                     <input
-                        type='text'
-                        id='telefone'
-                        value={telefone}
-                        onChange={(e) => setTelefone(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className='form-group'>
-                    <label htmlFor='cpf'>CPF:</label>
-                    <input
-                        type='text'
-                        id='cpf'
-                        value={cpf}
-                        onChange={(e) => setCpf(e.target.value)}
+                        type='password'
+                        id='senha'
+                        value={senha}
+                        onChange={(e) => setSenha(e.target.value)}
                         required
                     />
                 </div>

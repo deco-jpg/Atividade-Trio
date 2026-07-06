@@ -31,7 +31,6 @@ export default function ClienteList() {
                             <th>#</th>
                             <th>Nome</th>
                             <th>E-mail</th>
-                            <th>Telefone</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,7 +39,7 @@ export default function ClienteList() {
                                 <td>{cliente.id}</td>
                                 <td>{cliente.nome}</td>
                                 <td>{cliente.email}</td>
-                                <td>{cliente.telefone}</td>
+                            
                             </tr>
                         ))}
                     </tbody>
