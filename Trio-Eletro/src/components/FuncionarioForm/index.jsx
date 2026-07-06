@@ -5,25 +5,27 @@ import '../FuncionarioForm/style.css'
 
 export default function CadastroFuncionarioPage() {
     const [nome, setNome] = useState('')
-    const [telefone, setTelefone] = useState('')
+    const [cpf, setCpf] = useState('')
     const [email, setEmail] = useState('')
-    const [cargo, setCargo] = useState('')
+    const [telefone, setTelefone] = useState('')
     const [setor, setSetor] = useState('')
+    const [salario, setSalario] = useState('')
     const [estaEnviando, setEstaEnviando] = useState(false)
 
     function limparCamposDoFormulario() {
         setNome('')
-        setTelefone('')
+        setCpf('')
         setEmail('')
-        setCargo('')
+        setTelefone('')
         setSetor('')
+        setSalario('')
     }
 
     async function enviarFormulario(event) {
         event.preventDefault()
         setEstaEnviando(true)
 
-        const dadosFormulario = { nome, telefone, email, cargo, setor }
+        const dadosFormulario = { nome, cpf, email, telefone, setor, salario }
 
         try {
             const resposta = await api.post('/funcionarios', dadosFormulario)
@@ -52,13 +54,13 @@ export default function CadastroFuncionarioPage() {
                     />
                 </div>
                 <div className="grupo-form">
-                    <label htmlFor="campo-telefone">Telefone:</label>
+                    <label htmlFor="campo-cpf">CPF:</label>
                     <input
                         type="text"
-                        id="campo-telefone"
-                        value={telefone}
-                        onChange={(e) => setTelefone(e.target.value)}
-                        placeholder="Ex: (11) 98888-7777"
+                        id="campo-cpf"
+                        value={cpf}
+                        onChange={(e) => setCpf(e.target.value)}
+                        placeholder="Ex: 123.456.789-00"
                     />
                 </div>
                 <div className="grupo-form">
@@ -72,13 +74,13 @@ export default function CadastroFuncionarioPage() {
                     />
                 </div>
                 <div className="grupo-form">
-                    <label htmlFor="campo-cargo">Cargo:</label>
+                    <label htmlFor="campo-cargo">Telefone</label>
                     <input
                         type="text"
-                        id="campo-cargo"
-                        value={cargo}
-                        onChange={(e) => setCargo(e.target.value)}
-                        placeholder="Ex: Analista de Sistemas"
+                        id="campo-telefone"
+                        value={telefone}
+                        onChange={(e) => setTelefone(e.target.value)}
+                        placeholder="Ex: (11) 98888-7777"
                     />
                 </div>
                 <div className="grupo-form">
@@ -91,6 +93,17 @@ export default function CadastroFuncionarioPage() {
                         placeholder="Ex: Tecnologia da Informação"
                     />
                 </div>
+                <div className="grupo-form">
+                    <label htmlFor="campo-salario">Salário:</label>
+                    <input
+                        type="text"
+                        id="campo-salario"
+                        value={salario}
+                        onChange={(e) => setSalario(e.target.value)}
+                        placeholder="Ex: 5000.00"
+                    />
+                </div>
+
                 <button type="submit" disabled={estaEnviando}>
                     {estaEnviando ? 'Cadastrando...' : 'Cadastrar'}
                 </button>
