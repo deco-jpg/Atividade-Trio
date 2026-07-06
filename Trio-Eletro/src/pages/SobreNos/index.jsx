@@ -6,7 +6,7 @@ export default function SobreNos() {
       <h1>Sobre Nós</h1>
 
       <p>
-        A EletroStore é uma empresa especializada na venda de produtos
+        A Trio-Eletro é uma empresa especializada na venda de produtos
         eletrônicos, oferecendo qualidade, confiança e excelência no
         atendimento aos seus clientes.
       </p>

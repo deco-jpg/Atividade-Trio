@@ -5,9 +5,9 @@ export default function ContatoPage() {
     <main>
       <h1>Contato</h1>
 
-      <p>Email: contato@eletrostore.com</p>
-      <p>Telefone: (11) 99999-9999</p>
-      <p>Endereço: Rua das Tecnologias, 100</p>
+      <p>Email: contato@trioeletro.com</p>
+      <p>Telefone: (71) 99999-9999</p>
+      <p>Endereço: Av Dendezeiros, 100</p>
     </main>
   );
 }
