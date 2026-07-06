@@ -1,0 +1,98 @@
+.funcionario-list-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--accent-bg);
+}
+
+.list-title {
+  font-size: 1.5rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.table-wrapper {
+  overflow-x: auto; /* Garante que a tabela não quebre em telas menores */
+}
+
+.funcionario-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.funcionario-table th {
+  background-color: var(--accent-bg);
+  color: var(--accent);
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.funcionario-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--accent-bg);
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.funcionario-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+/* Status ou Cargo Tag (Opcional, caso queira estilizar uma tag) */
+.badge-cargo {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--accent-bg);
+  color: var(--accent);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Botões de Ação */
+.actions-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-action {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-edit {
+  background-color: var(--accent-bg);
+  color: var(--accent);
+}
+
+.btn-edit:hover {
+  background-color: var(--accent-border);
+  color: #fff;
+}
+
+.btn-delete {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+  color: #fff;
+}

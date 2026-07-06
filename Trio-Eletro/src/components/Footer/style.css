@@ -1,0 +1,27 @@
+.footer {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-top: 2px solid var(--accent-bg);
+  text-align: center;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: auto; /* Garante que fique embaixo se usar flexbox no App */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
