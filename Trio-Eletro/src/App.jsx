@@ -1,7 +1,12 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import HomePage from './pages/HomePage'
+import CadastroClientePage from './pages/CadastroClientePage'
+import CadastroFuncionarioPage from './pages/CadastroFuncionarioPage'
+import ListaClientesPage from './pages/ListaClientesPage'
+import ListaFuncionariosPage from './pages/ListaFuncionariosPage'
 import './App.css'
 
 function App() {
