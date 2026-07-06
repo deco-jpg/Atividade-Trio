@@ -1,2 +1,2 @@
-# Atividade-Trio
-Trio: Danilo Sena, Alvaro Coelho, Stephanie Miranda
+# Atividade-Trio (Quarteto)
+Trio: Danilo Sena, Alvaro Coelho, Stephanie Miranda, Queila Leal.
