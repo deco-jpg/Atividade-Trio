@@ -6,28 +6,25 @@ import api from '../../services/api';
 export default function ClienteForm() {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
-    const [telefone, setTelefone] = useState('');
-    const [cpf, setCpf] = useState('');
-    const [estaEnviando, setEstaEnviando] = useState(false);    
+    const [senha, setSenha] = useState('');
+    const [estaEnviando, setEstaEnviando] = useState(false);
 
     function limparCampos() {
         setNome('');
         setEmail('');
-        setTelefone('');
-        setCpf('');
+        setSenha('');
     }
-    
-    function EnviarFormulario(event) {
+
+    async function EnviarFormulario(event) {
         event.preventDefault();
         setEstaEnviando(true);
         const dadosFormulario = {
             nome: nome,
             email: email,
-            telefone: telefone,
-            cpf: cpf
+            senha: senha
         };
 
-        try {   
+        try {
             const response = await api.post('/clientes', dadosFormulario)
             toast.success(response.data.mensagem);
             limparCampos();
@@ -36,7 +33,7 @@ export default function ClienteForm() {
             toast.error(mensagemDoServidor || 'Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
         } finally {
             setEstaEnviando(false);
-    }
+        }
 
     }
     return (
@@ -64,22 +61,12 @@ export default function ClienteForm() {
                     />
                 </div>
                 <div className='form-group'>
-                    <label htmlFor='telefone'>Telefone:</label>
+                    <label htmlFor='senha'>Senha:</label>
                     <input
-                        type='text'
-                        id='telefone'
-                        value={telefone}
-                        onChange={(e) => setTelefone(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className='form-group'>
-                    <label htmlFor='cpf'>CPF:</label>
-                    <input
-                        type='text'
-                        id='cpf'
-                        value={cpf}
-                        onChange={(e) => setCpf(e.target.value)}
+                        type='password'
+                        id='senha'
+                        value={senha}
+                        onChange={(e) => setSenha(e.target.value)}
                         required
                     />
                 </div>
@@ -93,4 +80,4 @@ export default function ClienteForm() {
 
         </div>
     )
-}      
+}
