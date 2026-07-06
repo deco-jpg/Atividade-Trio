@@ -23,7 +23,7 @@ function App() {
           <Route path="/funcionarios" element={<ListaFuncionariosPage />} />
         </Routes>
         <Footer />
-       
+      
       </>
       
     </>
