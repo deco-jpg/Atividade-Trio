@@ -8,7 +8,7 @@ export default function ClienteForm() {
     const [email, setEmail] = useState('');
     const [telefone, setTelefone] = useState('');
     const [cpf, setCpf] = useState('');
-    const [estaEnviando, setEstaEnviando] = useState(false);    
+    const [estaEnviando, setEstaEnviando] = useState(false);
 
     function limparCampos() {
         setNome('');
@@ -16,8 +16,8 @@ export default function ClienteForm() {
         setTelefone('');
         setCpf('');
     }
-    
-    function EnviarFormulario(event) {
+
+    async function EnviarFormulario(event) {
         event.preventDefault();
         setEstaEnviando(true);
         const dadosFormulario = {
@@ -27,7 +27,7 @@ export default function ClienteForm() {
             cpf: cpf
         };
 
-        try {   
+        try {
             const response = await api.post('/clientes', dadosFormulario)
             toast.success(response.data.mensagem);
             limparCampos();
@@ -36,7 +36,7 @@ export default function ClienteForm() {
             toast.error(mensagemDoServidor || 'Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
         } finally {
             setEstaEnviando(false);
-    }
+        }
 
     }
     return (
@@ -93,4 +93,4 @@ export default function ClienteForm() {
 
         </div>
     )
-}      
+}
