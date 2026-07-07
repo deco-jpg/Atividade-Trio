@@ -1,11 +1,12 @@
 import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import "./App.css";
 
 // Importação de Componentes
-import Header from "./components/Header"; // Ajustado para importar de Header e não Footer duplicado
+import Header from "./components/Header"; 
 import Footer from "./components/Footer";
 
-// Importação das Páginas (Nomes corrigidos de acordo com a sua pasta 'pages')
+// Importação das Páginas
 import HomePage from "./pages/HomePage";
 import ClientePage from "./pages/ClientePage";
 import FuncionarioPage from "./pages/FuncionarioPage";
@@ -14,6 +15,7 @@ import ProdutoPage from "./pages/ProdutoPage";
 import SobreNos from "./pages/SobreNos";
 
 function App() {
+  const [count, setCount] = useState(0);
 
   return (
     <>
