@@ -7,15 +7,23 @@ function Header() {
       <h1>Sistema de Clientes</h1>
 
       <nav>
+        {/* Link para a HomePage */}
         <Link to="/">Home</Link>
 
-        <Link to="/cadastro">
-          Cadastrar
-        </Link>
+        {/* Link para a ClientePage */}
+        <Link to="/cadastro-cliente">Clientes</Link>
 
-        <Link to="/clientes">
-          Listar Clientes
-        </Link>
+        {/* Link para a FuncionarioPage */}
+        <Link to="/cadastro-funcionario">Funcionários</Link>
+
+        {/* Link para a ProdutoPage */}
+        <Link to="/produtos">Produtos</Link>
+
+        {/* Link para a ContatoPage */}
+        <Link to="/contato">Contato</Link>
+
+        {/* Link para a SobreNos */}
+        <Link to="/sobre-nos">Sobre Nós</Link>
       </nav>
     </header>
   );

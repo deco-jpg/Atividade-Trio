@@ -1,21 +1,19 @@
-import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
 // Importação de Componentes
-import Header from "./components/Header"; 
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 // Importação das Páginas
-import HomePage from "./pages/HomePage";
 import ClientePage from "./pages/ClientePage";
-import FuncionarioPage from "./pages/FuncionarioPage";
 import ContatoPage from "./pages/ContatoPage";
+import FuncionarioPage from "./pages/FuncionarioPage";
+import HomePage from "./pages/HomePage";
 import ProdutoPage from "./pages/ProdutoPage";
 import SobreNos from "./pages/SobreNos";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>

@@ -4,12 +4,12 @@ import ClienteList from "../../components/ClienteList";
 
 export default function ClientePage() {
   return (
-    <main>
+    <> {/* Mudado de <main> para Fragment para não duplicar com o App.jsx */}
       <h1>Clientes</h1>
-
+      
       <ClienteForm />
-
+      
       <ClienteList />
-    </main>
+    </>
   );
 }
